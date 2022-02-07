@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (isset($_POST["submit"])) {
+    if (isset($_POST["submit"])) {
     $connect = mysqli_connect("localhost", "root", "", "moduleconnexion");
     $request = "SELECT login, password FROM utilisateurs WHERE login = '" . $_POST["login"] . "'";
     $query = mysqli_query($connect, $request);
@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
           </div>
           
 
-<p style='color:rgb(19, 25, 61)'><a href="inscription.php">Inscription</a></p>             
+<p><a href="inscription.php">Inscription</a></p>             
                     
                 </form>
             </div>

@@ -12,12 +12,21 @@
 <body>
 
 <div id="container">
-    <h1><u>Acceuil</u></h1>   
-    <p>Bienvenue sur ma page d'acceuil, lien de connexion :</p>
+<form action="connexion.php" method="POST">
+    
+    <h1>||||Accueil||||</h1>   
+    <p>Lien de connexion :</p>
+    <div class='submit-connexion'>
     <p><a href=connexion.php>Connexion</a>
-    <p>Lien d'inscription au super site de Module de connexion :</p>
+    </div>
+    <div class='submit-connexion'>
+    <p>Lien d'inscription :</p>
     <p><a href=inscription.php>Inscription</a>
 </div>
+</form>
+</div>
+
 
 </body>
 </html>
+

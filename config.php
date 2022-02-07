@@ -1,5 +1,4 @@
 <?php
-
 return [
     // Configuration de la base de données
     'db_host' => 'localhost',

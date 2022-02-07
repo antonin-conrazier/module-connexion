@@ -10,7 +10,7 @@ if (isset($_POST["regsubmit"])) {
         while ($i < count($result)) {
             if ($result[$i][1] == $_POST["login"]) {
                 $connectstate = false;
-                header("location:inscription.php");
+                header("location:livre-or\inscription.php");
                 break;
             }
             ++$i;
@@ -20,9 +20,9 @@ if (isset($_POST["regsubmit"])) {
             $name = $_POST['prenom'];
             $firstname = $_POST['nom'];
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $request = "INSERT INTO utilisateurs (`login`, `prenom`, `nom`, `password`) VALUES ('$login', '$name', '$firstname', '$password')";
+            $request =  "INSERT INTO utilisateurs (`login`, `prenom`, `nom`, `password`) VALUES ('$login', '$name', '$firstname', '$password')";
             var_dump(mysqli_query($connect, $request)); 
-            header("location:connexion.php");
+            header("refresh:3; url = connexion.php");
         }
 
     }
@@ -34,7 +34,7 @@ if (isset($_POST["regsubmit"])) {
            <meta charset="utf-8">
             <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
         </head>
-        <body>
+        <body>  
             <div id="container">
             
                     <form action="inscription.php" method="POST">
